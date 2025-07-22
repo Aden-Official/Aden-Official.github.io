@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Deden Hotin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out;
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 0 12px rgba(34, 211, 238, 0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white font-sans">
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-10">
+    
+    <!-- Foto Profil -->
+    <div class="mb-6 animate-fadeIn">
+      <img src="https://files.catbox.moe/akd6fy.jpg" alt="Foto Deden" class="rounded-full w-36 h-36 border-4 border-cyan-400 shadow-xl">
+    </div>
+
+    <!-- Card Utama -->
+    <div class="max-w-3xl w-full bg-gray-900 bg-opacity-80 backdrop-blur-md p-8 rounded-2xl shadow-2xl space-y-6 animate-fadeIn border border-cyan-700">
+      <h1 class="text-3xl font-bold text-cyan-400 text-center tracking-wide">Portofolio Perkenalan Diri</h1>
+      <p class="text-sm text-purple-400 text-center">Oleh: <strong>Deden Hotin</strong> • XI MPLB • SMKN 1 Tirtamulya</p>
+
+      <!-- Biodata Ringkas -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-300 bg-gray-800 p-4 rounded-xl">
+        <div><span class="text-cyan-300 font-semibold">Nama:</span> Deden Hotin</div>
+        <div><span class="text-cyan-300 font-semibold">Kelas:</span> XI Manajemen Perkantoran dan Layanan Bisnis</div>
+        <div><span class="text-cyan-300 font-semibold">Asal Sekolah:</span> SMKN 1 Tirtamulya</div>
+        <div><span class="text-cyan-300 font-semibold">Domisili:</span> Karawang</div>
+        <div class="sm:col-span-2"><span class="text-cyan-300 font-semibold">Hobi:</span> Belajar Teknologi & Cybersecurity</div>
+      </div>
+
+      <!-- Isi Perkenalan -->
+      <div class="space-y-4 text-[1rem] leading-relaxed text-gray-200">
+        <p>Assalamualaikum warahmatullahi wabarakatuh.</p>
+        <p>Selamat pagi Bapak/Ibu guru dan teman-teman yang saya hormati.</p>
+        <p>Saya adalah pribadi yang cenderung belajar secara <span class="text-yellow-300 font-medium">otodidak</span>. Saya terbiasa mencari tahu sendiri, mencoba hal-hal baru, dan mendalami apa yang saya minati, khususnya dalam <span class="text-green-400">teknologi</span>.</p>
+        <p>Hobi saya adalah <span class="text-green-300 font-medium">cybersecurity</span>, karena saya tertarik dengan tantangan, logika, dan sistem keamanan digital. Saya ingin tahu bagaimana suatu sistem bisa diserang, dan lebih penting, bagaimana cara <span class="text-cyan-400 font-medium">melindunginya</span>.</p>
+        <p>Belajar cybersecurity membuat saya lebih teliti dan berpikir kritis. Saya percaya bahwa dunia digital yang aman membutuhkan orang-orang yang siap menjaga sistem di balik layar.</p>
+        <p>Cita-cita saya adalah menjadi seorang <span class="text-purple-400 font-semibold">pakar keamanan siber</span> yang bermanfaat bagi masyarakat, perusahaan, bahkan negara.</p>
+        <p>Demikian perkenalan dari saya. Terima kasih atas perhatiannya.</p>
+        <p>Wassalamualaikum warahmatullahi wabarakatuh.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-10 text-sm text-gray-500 text-center animate-fadeIn">
+      &copy; 2025 • Deden Hotin • Dibuat Dengan Cinta Mendalam🥰.
+    </footer>
+  </div>
+
+  <!-- Audio Player -->
+  <audio id="bg-music" preload="auto" loop>
+    <source src="https://files.catbox.moe/w7rvvy.mp3" type="audio/mp3">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- Musik Button -->
+  <button onclick="toggleMusic()" title="Putar / Hentikan Musik" class="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-cyan-500 hover:bg-cyan-600 shadow-lg flex items-center justify-center transition pulse">
+   <!-- GANTI bagian SVG di tombol musik -->
+<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z" />
+</svg>
+  </button>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    let isPlaying = false;
+
+    function toggleMusic() {
+      if (isPlaying) {
+        music.pause();
+      } else {
+        music.play();
+      }
+      isPlaying = !isPlaying;
+    }
+  </script>
+</body>
+  </html>
